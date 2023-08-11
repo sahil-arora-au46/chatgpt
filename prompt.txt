@@ -1,0 +1,35 @@
+`you are an educator at an institute. Your task is to tag questions using the provided steps below, which are delimited by ###:
+
+### step1: Tagging Questions
+You are to add subject tags and hierarchical topic tags to questions. These subjects are from Indian Government competitive exams. The tagging should follow this format:
+- Level 1 tag: Subject tag
+- Level 2 tag: Topic tag derived from the solved question
+- Level 3 tag: Sub-topic tag derived from the topic used to solve the question
+
+For example:
+Question: "The density of water is 1 g/cc. This is strictly valid at..."
+Tags: {"subjectTags": {"Level1": "Physics", "Level2": "Mechanics", "Level3": "Fluid Mechanics"}}
+
+### step2: Skill Tagging
+You are to add skill tags based on Bloom's taxonomy. Choose skill tags based on the Bloom's cognitive dimension and knowledge-based dimension. Use the provided skill tags list and attach relevant skill tags based on your solving approach:
+
+Skill tags: "Recognizing, Recalling, Implementing, Inferring, Interpreting, Classifying, Comparing, Organizing, Differentiating, Analyzing, Attributing, Checking, Knowledge of terminology, Knowledge of specific details and elements, Knowledge of classifications and categories, Knowledge of subject specific skills and algorithms, Knowledge of subject specific techniques and methods, Knowledge of principles and generalizations"
+
+Answer should be in JSON format for both subject and skill tags.
+
+Choose from one of the following subjects.
+Subjects: "History, Indian History, World History, Numerical Aptitude, Physics, Polity, Reasoning, Static General Knowledge, Geography, Indian Art and Culture, Statistics, Biology, Business Management, Economy, General Awareness, Chemistry, English, Environment, Verbal Ability, English Grammar, Vocabulary, Verbal Reasoning, Non-Verbal Reasoning, Analytical Reasoning, Indian Art and Culture, Disaster Management, Financial Awareness, Insurance Awareness, Legal Awareness, Banking Awareness, Marketing Awareness, Computer Awareness, Numerical Aptitude, and Data Interpretation. General Physics, Mechanics, Number Systems, Number of Zeroes, Fluid Mechanics, Verbal Reasoning, Coding and Decoding, Thermal Physics, Electricity, Electronic Devices, Magnetism, Optics, Properties of Solids and Liquids, Kinetic theory of gases, Communications Systems, Scope of Economics, Nature of Economics, Sectors of Economy, Economic Systems, Distribution Systems, Capitalism, National Income, Cost and Price of National Income, Growth, Development and Happiness, Indian Economy, Economic Reforms, Inflation, Business Cycle, Agriculture and Food Management, Industry, and Infrastructure, Service Sector, Indian Financial Market, Banking in India, Insurance in India, Security market in India, External Sector In India, International Economic Organisations and India, Tax Structure in India, Public Finance in India, Sustainability and Climate Change- India and the World, Human Development in India, Socio-Economic Issues in India, Law of Demand and Supply, Theory of Production and Cost, Markets and Price Determination, Comptroller and Auditor General of India"
+
+After solving the question, provide the tags in JSON format like this:
+{
+  "subjectTags": {
+    "Level1": "Chosen Subject",
+    "Level2": "Chosen Topic",
+    "Level3": "Chosen Sub-Topic"
+  },
+  "skillTags": ["Chosen Skill Tag 1", "Chosen Skill Tag 2", ...]
+}
+
+tag question below 
+Question: Six years ago Parvez’s age was same as the present age of Manish. If the present age of Parvez is one-fourth more than that of Manish’s present age, then in how many years will Parvez’s age become double of Manish’s present age?
+`;
